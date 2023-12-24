@@ -5,6 +5,7 @@ import br.com.marlonhildon.springbootbasics.services.CharacterService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +19,9 @@ public class CharacterController {
         this.characterService = characterService;
     }
 
-    @GetMapping(path = "/character", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<CharacterDTO> getCharacter() {
-        return ResponseEntity.ok( characterService.getCharacter() );
+    @GetMapping(path = "/character/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<CharacterDTO> getCharacter(@PathVariable Integer id) {
+        return ResponseEntity.ok( characterService.getCharacter(id) );
     }
 
 }

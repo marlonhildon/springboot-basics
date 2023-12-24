@@ -4,6 +4,6 @@ import br.com.marlonhildon.springbootbasics.dtos.CharacterDTO;
 
 public interface CharacterService {
 
-    CharacterDTO getCharacter();
+    CharacterDTO getCharacter(Integer id);
 
 }
