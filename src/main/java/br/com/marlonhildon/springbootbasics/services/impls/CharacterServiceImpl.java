@@ -22,4 +22,10 @@ public class CharacterServiceImpl implements CharacterService {
         return characterToReturn;
     }
 
+    @Override
+    public void saveCharacter(CharacterDTO characterToSave) {
+        CharacterEntity characterEntity = new CharacterEntity(characterToSave.getName());
+        characterRepository.saveAndFlush(characterEntity);
+    }
+
 }

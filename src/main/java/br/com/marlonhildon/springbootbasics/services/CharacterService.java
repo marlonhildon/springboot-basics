@@ -6,4 +6,6 @@ public interface CharacterService {
 
     CharacterDTO getCharacter(Integer id);
 
+    void saveCharacter(CharacterDTO characterToSave);
+
 }

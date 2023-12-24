@@ -18,6 +18,10 @@ public class CharacterEntity {
 
     public CharacterEntity() {}
 
+    public CharacterEntity(String name) {
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }
